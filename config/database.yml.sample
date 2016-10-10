@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: enrollment_system_development
+  host: localhost
+
+test:
+  <<: *default
+  database: enrollment_system_test
+  host: localhost
+
+production:
+  <<: *default
+  database: enrollment_system_production
+  host: localhost
