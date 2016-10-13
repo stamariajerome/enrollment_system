@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   # TODO revise with only/except
-  before_action :require_user, :dashboard, :my_schedule, :enrollment
+  before_action :require_user, :dashboard, :schedule, :enrollment
   def dashboard
   end
 
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @courses = Course.all
   end
 
-  def my_schedule
+  def schedule
     @schedules = Schedule.my_schedule(current_user.id)
   end
 end

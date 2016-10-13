@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   # Users route
   get "/dashboard", to: "users#dashboard"
-  get "/my-schedule", to: "users#my_schedule"
+  get "/my-schedule", to: "users#schedule"
   get "/enrollment", to: "users#enrollment"
 end
