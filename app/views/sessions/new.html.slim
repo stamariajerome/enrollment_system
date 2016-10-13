@@ -1,0 +1,22 @@
+.container
+  .col-lg-4.col-lg-offset-4.container-logo
+    = image_tag "Saint_Louis_University_logo.png", alt: "Saint Louis University"
+  .col-lg-4.col-lg-offset-4.container-login
+    .panel.panel-default
+      .panel-heading
+        = render 'message'
+        h4.text-center
+          strong Login Portal
+
+      .panel-body
+        = form_for :session, url: root_path do |f|
+          .form-group
+            = f.label :email
+            = f.email_field :email, autofocus: true, class: "form-control", placeholder: "2104134@slu.edu.ph"
+
+          .form-group
+            = f.label :password
+            = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "password"
+          
+          .form-group
+            = f.submit"Login", class: "btn btn-primary btn-login"

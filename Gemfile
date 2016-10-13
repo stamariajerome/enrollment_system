@@ -1,7 +1,6 @@
 ruby '2.3.1'
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
@@ -23,12 +22,20 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'bcrypt', '~> 3.1.7'
+
 gem 'slim-rails'
+
+gem 'bootstrap-sass', '~> 3.3.6'
+
+gem "font-awesome-rails"
+
+# gem 'jquery-datatables-rails', '~> 3.4.0'
+
 group :development, :test do
+  gem "bower-rails", "~> 0.11.0"
+  gem "better_errors"
   gem 'awesome_print'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

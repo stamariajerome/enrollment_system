@@ -1,0 +1,7 @@
+.container-fluid
+  .row
+    = render 'sidebar'      
+    .page-content.col-sm-9.col-lg-10
+      = render 'navbar'
+      .container
+        = render 'table', objects: @courses

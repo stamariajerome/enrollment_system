@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # Sessions route
+  root "sessions#new"
+  post "/", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
+
+  # Users route
+  get "/dashboard", to: "users#dashboard"
+  get "/my-schedule", to: "users#my_schedule"
+  get "/enrollment", to: "users#enrollment"
 end

@@ -1,0 +1,11 @@
+nav.navbar {
+  & .navbar-header {
+    & .navbar-brand {
+      width: 100%;
+    }
+  }
+
+  ul.nav li a {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,22 @@
+table#example.table.table-striped.table-bordered
+  thead
+    tr
+      th Class code
+      th Course Number
+      th Course Description
+      th Units
+      th Schedule
+      th Days
+      th Room
+      
+  tbody
+    - objects.each do |object|
+      tr
+        td = object.class_code
+        td = object.course_number.upcase
+        td = object.course_description.upcase
+        td = object.course_unit
+        td = object.course_schedule
+        td = object.day
+        td = object.room
+      

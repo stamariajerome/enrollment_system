@@ -1,0 +1,10 @@
+@import "./application/bootstrap/variable";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "./application/**/*";
+
+body {
+  background-color: $body-background-color;
+}

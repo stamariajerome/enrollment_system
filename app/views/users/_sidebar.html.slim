@@ -1,0 +1,23 @@
+.col-sm-3.col-lg-2
+  nav.navbar.navbar-default.navbar-fixed-side
+    .container-fluide
+      .navbar-header
+        button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"
+          span.sr-only Toggle navigation
+          
+          span.icon-bar
+          
+          span.icon-bar
+          
+          span.icon-bar
+          
+        = image_tag "Saint_Louis_University_logo.png", class: "navbar-brand"
+      .collapse.navbar-collapse#bs-example-navbar-collapse-1
+        ul.nav.navbar-nav
+          li
+            = link_to fa_icon('camera-retro', text: 'Enrollment'), enrollment_path
+          li            
+            = link_to fa_icon('camera', text: 'My Schedule'), my_schedule_path
+        
+        / ul.nav.navbar-nav.navbar-right
+          / li = current_user.email

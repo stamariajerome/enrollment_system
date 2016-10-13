@@ -1,0 +1,19 @@
+.container-logo {
+  margin-top: 20px;
+}
+
+.container-login {
+  margin-top: 20px;
+  & .panel-heading {
+    h3 {
+      margin: 0;
+    }
+  }
+
+  & .panel-body {
+    & .btn-login {
+      display: block;
+      width:100%;
+    }
+  }
+}
