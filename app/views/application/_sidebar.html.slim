@@ -15,9 +15,13 @@
       .collapse.navbar-collapse#bs-example-navbar-collapse-1
         ul.nav.navbar-nav
           li
-            = link_to fa_icon('camera-retro', text: 'Enrollment'), enrollments_path
-          li            
-            = link_to fa_icon('camera', text: 'My Schedule'), my_schedules_path
+            / = link_to fa_icon('camera-retro', text: 'Enrollment'), enrollments_path
+            = link_to 'Enrollment'
+          li    
+            = link_to 'Schedule'        
+            / = link_to fa_icon('camera', text: 'My Schedule'), my_schedules_path
+          li    
+            = link_to 'Online Registration'    
         
         / ul.nav.navbar-nav.navbar-right
           / li = current_user.email
