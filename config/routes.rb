@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   post "/", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
-  # Users route
-  get "/dashboard", to: "users#dashboard"
-  get "/my-schedule", to: "users#schedule"
-  get "/enrollment", to: "users#enrollment"
+  resources :enrollments, only: [:index]
+
+  resources :my_schedules, only: [:index] do
+    resources :subjects, only: [:index]
+  end
 end
